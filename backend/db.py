@@ -7,7 +7,7 @@ from pymongo import ASCENDING, MongoClient
 MONGO_URL = os.environ.get("MONGO_URL", "mongodb://localhost:27017")
 DB_NAME = os.environ.get("DB_NAME", "lab_tracker")
 
-client = MongoClient(MONGO_URL, serverSelectionTimeoutMS=2000)
+client = MongoClient(MONGO_URL, serverSelectionTimeoutMS=10000)
 db = client[DB_NAME]
 subjects = db["subjects"]  # предмети
 labs = db["labs"]          # лабораторні (кожна посилається на предмет через subject_id)
