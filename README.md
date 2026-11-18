@@ -29,6 +29,9 @@
 ```bash
 python cli.py progress
 python cli.py subjects
-python cli.py add-lab НБД 1 "Основи нереляційних БД" --deadline 2026-11-25
-python cli.py labs --subject НБД --status in_progress
+python cli.py add-lab "Нереляційні бази даних" 1 "Основи нереляційних БД" --deadline 2026-11-25
+python cli.py status "Нереляційні бази даних" 1 in_progress
+python cli.py labs --subject "Нереляційні бази даних" --status in_progress
 ```
+
+Назву предмета треба писати повністю, як у списку `python cli.py subjects` (великі й малі літери не важливі). Якщо в назві є пробіли, її беруть у лапки.
