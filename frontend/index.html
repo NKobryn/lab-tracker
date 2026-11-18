@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Трекер лабораторних</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Бічна панель: навігація, предмети, загальний прогрес -->
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark"></span>Трекер лабораторних</div>
+
+    <nav class="nav">
+      <button class="nav-item" data-view="week">Цей тиждень <span class="nav-count" id="week-count"></span></button>
+      <button class="nav-item" data-view="all">Усі лабораторні</button>
+    </nav>
+
+    <div class="nav-section">
+      <span>Предмети</span>
+      <button class="icon-btn" id="new-subject" title="Новий предмет"></button>
+    </div>
+    <ul class="subject-list" id="subject-list"></ul>
+
+    <div class="sidebar-progress" id="progress"></div>
+  </aside>
+
+  <!-- Основна частина: вміст вибраного розділу -->
+  <main id="view"></main>
+
+  <!-- Випадне меню (статус, дедлайн, дії) -->
+  <div id="popover" class="popover hidden"></div>
+  <!-- Діалогове вікно для форм і підтверджень -->
+  <dialog id="dialog"></dialog>
+  <!-- Коротке повідомлення -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
